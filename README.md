@@ -16,15 +16,15 @@ _You've sent the file. The printer calls back. Something about resolution. You n
 
 ### What's covered
 
-1. [DPI explained — simply](https://www.google.com/search?q=%23s1)
-2. [DPI vs PPI: the difference that matters](https://www.google.com/search?q=%23s2)
-3. [How to check image DPI online](https://www.google.com/search?q=%23s3)
-4. [How to change or increase image DPI](https://www.google.com/search?q=%23s4)
-5. [Checking PDF DPI — why it's complicated](https://www.google.com/search?q=%23s5)
-6. [Changing PDF resolution for print or email](https://www.google.com/search?q=%23s6)
-7. [DPI reference: the cheat sheet](https://www.google.com/search?q=%23s7)
-8. [Common mistakes and how to avoid them](https://www.google.com/search?q=%23s8)
-9. [FAQ](https://www.google.com/search?q=%23s9)
+1. DPI explained — simply
+2. DPI vs PPI: the difference that matters
+3. How to check image DPI online
+4. How to change or increase image DPI
+5. Checking PDF DPI — why it's complicated
+6. Changing PDF resolution for print or email
+7. DPI reference: the cheat sheet
+8. Common mistakes and how to avoid them
+9. FAQ
 
 ---
 
