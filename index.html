@@ -1,0 +1,1420 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      DPI & Resolution Guide: How to Check, Change & Convert PDF and Image DPI
+      Online (2026)
+    </title>
+    <meta
+      name="description"
+      content="Everything you need to know about DPI and PPI for PDFs and images. Learn how to check PDF DPI, convert images to 300 DPI, change PDF resolution, and use free online tools — no Photoshop needed."
+    />
+    <meta
+      name="keywords"
+      content="pdf dpi converter, change pdf dpi, pdf resolution changer, image dpi converter, check pdf dpi online, convert pdf to 300 dpi, pdf dpi checker, image resolution checker, increase picture resolution online, make pdf 300 dpi"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --ink: #1a1410;
+        --paper: #f9f5ef;
+        --cream: #f0e8d8;
+        --rust: #c0451e;
+        --gold: #b8861a;
+        --sage: #4a6741;
+        --muted: #7a6f65;
+        --rule: #d4c9b8;
+        --highlight: #fff8e6;
+        --code-bg: #2b2520;
+        --code-text: #e8d5b7;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background-color: var(--paper);
+        color: var(--ink);
+        font-family: "Source Serif 4", Georgia, serif;
+        font-size: 18px;
+        line-height: 1.8;
+        font-weight: 300;
+      }
+
+      /* MASTHEAD */
+      .masthead {
+        background: var(--ink);
+        color: var(--paper);
+        text-align: center;
+        padding: 12px 24px;
+        font-size: 12px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        font-family: "Source Serif 4", serif;
+      }
+
+      .masthead a {
+        color: var(--gold);
+        text-decoration: none;
+      }
+      .masthead a:hover {
+        text-decoration: underline;
+      }
+
+      /* HERO */
+      .hero {
+        background: var(--ink);
+        color: var(--paper);
+        padding: 72px 24px 60px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: repeating-linear-gradient(
+          0deg,
+          transparent,
+          transparent 40px,
+          rgba(255, 255, 255, 0.02) 40px,
+          rgba(255, 255, 255, 0.02) 41px
+        );
+        pointer-events: none;
+      }
+
+      .hero-eyebrow {
+        display: inline-block;
+        font-size: 11px;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: var(--gold);
+        border: 1px solid var(--gold);
+        padding: 4px 14px;
+        margin-bottom: 28px;
+        font-family: "Source Serif 4", serif;
+      }
+
+      .hero h1 {
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: clamp(2rem, 5vw, 3.6rem);
+        font-weight: 700;
+        line-height: 1.15;
+        max-width: 820px;
+        margin: 0 auto 24px;
+        letter-spacing: -0.01em;
+      }
+
+      .hero h1 em {
+        font-style: italic;
+        color: var(--gold);
+      }
+
+      .hero-meta {
+        font-size: 13px;
+        letter-spacing: 0.08em;
+        color: rgba(249, 245, 239, 0.55);
+        text-transform: uppercase;
+        margin-top: 20px;
+      }
+
+      .hero-meta span {
+        color: rgba(249, 245, 239, 0.35);
+        margin: 0 10px;
+      }
+
+      /* LAYOUT */
+      .container {
+        max-width: 780px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      .article-body {
+        padding: 64px 0 80px;
+      }
+
+      /* TABLE OF CONTENTS */
+      .toc {
+        background: var(--cream);
+        border-left: 3px solid var(--rust);
+        padding: 28px 32px;
+        margin: 0 0 52px;
+        border-radius: 2px;
+      }
+
+      .toc-title {
+        font-family: "Playfair Display", serif;
+        font-size: 14px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--rust);
+        margin-bottom: 16px;
+      }
+
+      .toc ol {
+        padding-left: 20px;
+      }
+
+      .toc li {
+        margin-bottom: 6px;
+        font-size: 15px;
+      }
+
+      .toc a {
+        color: var(--ink);
+        text-decoration: none;
+        border-bottom: 1px dotted var(--muted);
+      }
+
+      .toc a:hover {
+        color: var(--rust);
+        border-color: var(--rust);
+      }
+
+      /* TYPOGRAPHY */
+      h2 {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        font-weight: 700;
+        line-height: 1.25;
+        color: var(--ink);
+        margin: 60px 0 20px;
+        padding-top: 8px;
+      }
+
+      h2::before {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 2px;
+        background: var(--rust);
+        margin-bottom: 16px;
+      }
+
+      h3 {
+        font-family: "Playfair Display", serif;
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin: 36px 0 12px;
+        color: var(--ink);
+      }
+
+      p {
+        margin-bottom: 22px;
+        color: #2a221a;
+      }
+
+      a {
+        color: var(--rust);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(192, 69, 30, 0.3);
+        transition:
+          border-color 0.2s,
+          color 0.2s;
+      }
+
+      a:hover {
+        color: var(--gold);
+        border-color: var(--gold);
+      }
+
+      strong {
+        font-weight: 600;
+        color: var(--ink);
+      }
+
+      /* PULL QUOTE */
+      .pullquote {
+        border-top: 2px solid var(--rust);
+        border-bottom: 2px solid var(--rust);
+        margin: 44px 0;
+        padding: 28px 0;
+        text-align: center;
+      }
+
+      .pullquote p {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(1.15rem, 2.5vw, 1.45rem);
+        font-style: italic;
+        line-height: 1.5;
+        color: var(--ink);
+        margin: 0;
+        max-width: 640px;
+        margin: 0 auto;
+      }
+
+      /* CALLOUT / TOOL BOX */
+      .tool-card {
+        background: var(--cream);
+        border: 1px solid var(--rule);
+        border-radius: 4px;
+        padding: 28px 30px;
+        margin: 36px 0;
+        position: relative;
+      }
+
+      .tool-card::before {
+        content: "🛠";
+        font-size: 20px;
+        position: absolute;
+        top: -14px;
+        left: 20px;
+        background: var(--cream);
+        padding: 0 8px;
+      }
+
+      .tool-card h4 {
+        font-family: "Playfair Display", serif;
+        font-size: 1.05rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: var(--rust);
+      }
+
+      .tool-card p {
+        margin-bottom: 10px;
+        font-size: 16px;
+      }
+      .tool-card p:last-child {
+        margin-bottom: 0;
+      }
+
+      .tool-card .tool-link {
+        display: inline-block;
+        background: var(--rust);
+        color: var(--paper);
+        padding: 7px 18px;
+        font-size: 13px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-family: "Source Serif 4", serif;
+        border: none;
+        border-radius: 2px;
+        margin-top: 4px;
+        text-decoration: none;
+        transition: background 0.2s;
+      }
+
+      .tool-card .tool-link:hover {
+        background: var(--gold);
+        border: none;
+      }
+
+      /* STEPS */
+      .steps {
+        counter-reset: step;
+        list-style: none;
+        padding: 0;
+        margin: 24px 0 32px;
+      }
+
+      .steps li {
+        counter-increment: step;
+        display: flex;
+        gap: 18px;
+        margin-bottom: 18px;
+        align-items: flex-start;
+        font-size: 17px;
+      }
+
+      .steps li::before {
+        content: counter(step);
+        flex-shrink: 0;
+        width: 32px;
+        height: 32px;
+        background: var(--rust);
+        color: var(--paper);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Playfair Display", serif;
+        font-size: 14px;
+        font-weight: 700;
+        margin-top: 2px;
+      }
+
+      /* HIGHLIGHT BOX */
+      .highlight-box {
+        background: var(--highlight);
+        border-left: 4px solid var(--gold);
+        padding: 20px 24px;
+        margin: 32px 0;
+        font-size: 16px;
+        border-radius: 0 4px 4px 0;
+      }
+
+      .highlight-box strong {
+        color: var(--gold);
+      }
+
+      /* FAQ */
+      .faq-section {
+        margin-top: 60px;
+      }
+
+      .faq-item {
+        border-bottom: 1px solid var(--rule);
+        padding: 24px 0;
+      }
+
+      .faq-item:first-of-type {
+        border-top: 1px solid var(--rule);
+      }
+
+      .faq-q {
+        font-family: "Playfair Display", serif;
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--ink);
+        margin-bottom: 10px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+      .faq-q::after {
+        content: "+";
+        flex-shrink: 0;
+        font-size: 1.4rem;
+        color: var(--rust);
+        line-height: 1;
+        margin-top: 2px;
+      }
+
+      .faq-a {
+        font-size: 16px;
+        color: #3a2e26;
+        line-height: 1.75;
+      }
+
+      /* DATA TABLE */
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 28px 0;
+        font-size: 15px;
+      }
+
+      .data-table th {
+        background: var(--ink);
+        color: var(--paper);
+        padding: 12px 16px;
+        text-align: left;
+        font-family: "Source Serif 4", serif;
+        font-weight: 600;
+        font-size: 13px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .data-table td {
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--rule);
+        vertical-align: top;
+      }
+
+      .data-table tr:nth-child(even) td {
+        background: var(--cream);
+      }
+
+      /* DIVIDER */
+      .rule {
+        border: none;
+        border-top: 1px solid var(--rule);
+        margin: 52px 0;
+      }
+
+      /* FOOTER CALLOUT */
+      .footer-cta {
+        background: var(--ink);
+        color: var(--paper);
+        text-align: center;
+        padding: 56px 24px;
+        margin-top: 64px;
+      }
+
+      .footer-cta h3 {
+        font-family: "Playfair Display", serif;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--paper);
+        margin-bottom: 12px;
+      }
+
+      .footer-cta p {
+        color: rgba(249, 245, 239, 0.7);
+        max-width: 480px;
+        margin: 0 auto 28px;
+        font-size: 16px;
+      }
+
+      .footer-cta .btn-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+      }
+
+      .footer-cta a {
+        background: var(--rust);
+        color: var(--paper);
+        padding: 11px 22px;
+        font-size: 13px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 2px;
+        text-decoration: none;
+        transition: background 0.2s;
+      }
+
+      .footer-cta a:hover {
+        background: var(--gold);
+      }
+      .footer-cta a.secondary {
+        background: transparent;
+        border: 1px solid rgba(249, 245, 239, 0.3);
+      }
+      .footer-cta a.secondary:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      /* READING LINE */
+      .reading-line {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 3px;
+        background: var(--rust);
+        width: 0%;
+        z-index: 999;
+        transition: width 0.1s linear;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 600px) {
+        body {
+          font-size: 16px;
+        }
+        .hero {
+          padding: 48px 20px 44px;
+        }
+        .toc {
+          padding: 20px;
+        }
+        h2 {
+          margin-top: 44px;
+        }
+        .data-table {
+          font-size: 13px;
+        }
+        .data-table th,
+        .data-table td {
+          padding: 10px 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reading-line" id="readingLine"></div>
+
+    <div class="masthead">
+      The Snappy Fix Knowledge Base &nbsp;|&nbsp;
+      <a href="https://www.snappy-fix.com/">snappy-fix.com</a> &nbsp;|&nbsp;
+      Free Tools for Designers, Printers & Publishers
+    </div>
+
+    <header class="hero">
+      <div class="hero-eyebrow">
+        Complete DPI & Resolution Guide · 2026 Edition
+      </div>
+      <h1>
+        DPI, PPI & PDF Resolution:<br /><em>The Plain-English Guide</em><br />to
+        Checking, Changing & Converting
+      </h1>
+      <div class="hero-meta">
+        By the Snappy Fix Editorial Team <span>·</span> Updated May 2026
+        <span>·</span> 11 min read
+      </div>
+    </header>
+
+    <main class="container article-body">
+      <nav class="toc" aria-label="Table of contents">
+        <div class="toc-title">In This Guide</div>
+        <ol>
+          <li>
+            <a href="#what-is-dpi"
+              >What is DPI (and why does it actually matter)?</a
+            >
+          </li>
+          <li><a href="#dpi-vs-ppi">DPI vs PPI — What's the Difference?</a></li>
+          <li>
+            <a href="#check-image-dpi">How to Check the DPI of an Image</a>
+          </li>
+          <li>
+            <a href="#change-image-dpi">How to Increase or Change Image DPI</a>
+          </li>
+          <li>
+            <a href="#check-pdf-dpi">How to Check PDF DPI & Resolution</a>
+          </li>
+          <li>
+            <a href="#change-pdf-dpi">How to Change PDF DPI and Resolution</a>
+          </li>
+          <li>
+            <a href="#printing-table"
+              >Quick Reference: DPI Values for Every Use Case</a
+            >
+          </li>
+          <li><a href="#faq">Frequently Asked Questions</a></li>
+        </ol>
+      </nav>
+
+      <p>
+        If you've ever sent a file to a print shop only to get it back looking
+        like it was printed through a shower door, chances are DPI was the
+        culprit. Or maybe you're on the other side — a designer checking a
+        client's PDF before a press run, nervous that the embedded images won't
+        hold up at full bleed.
+      </p>
+
+      <p>
+        Either way, DPI and resolution confusion causes real problems every day.
+        It wastes money, delays deadlines, and turns simple jobs into
+        hair-pulling ordeals. This guide cuts through the noise. We'll explain
+        what DPI and PPI actually mean, when they matter, how to check them in
+        both images and PDFs, and how to change them — all without touching
+        Photoshop.
+      </p>
+
+      <!-- ===================== SECTION 1 ===================== -->
+      <h2 id="what-is-dpi">1. What Is DPI — And Why Does It Matter?</h2>
+
+      <p>
+        <strong>DPI stands for "dots per inch."</strong> It measures how many
+        individual ink dots a printer places within one linear inch of a printed
+        surface. A higher DPI means more dots, which means finer detail, crisper
+        text, and smoother gradients. A lower DPI means fewer dots, and at some
+        point, you start to see the individual blocks of color — a.k.a.
+        pixelation.
+      </p>
+
+      <p>
+        The term comes from the physical world of printing. According to
+        <a
+          href="https://en.wikipedia.org/wiki/Dots_per_inch"
+          target="_blank"
+          rel="noopener"
+          >Wikipedia's detailed entry on DPI</a
+        >, the concept traces back to inkjet and laser printing where the output
+        device deposits discrete ink drops. The number of those drops per inch
+        determines print sharpness.
+      </p>
+
+      <p>
+        Here's the part that trips people up:
+        <strong>DPI is meaningless on a screen.</strong> Your monitor doesn't
+        use ink dots — it uses pixels. So when someone says "my image is 72
+        DPI," what they often mean is that the image was saved with a 72 DPI
+        metadata tag — common for web images — not that it's low quality in any
+        absolute sense. A 6000×4000 pixel photo tagged at 72 DPI is still a
+        massive, high-quality file. The DPI number only kicks in when you tell a
+        printer how large to reproduce it.
+      </p>
+
+      <div class="highlight-box">
+        <strong>Key insight:</strong> DPI is a print concept. The actual pixel
+        dimensions of your file determine the raw information available. DPI
+        tells a printer how densely to pack those pixels into a physical space.
+        Change the DPI number without resampling and you're just resizing the
+        intended print output — not adding or removing detail.
+      </div>
+
+      <p>
+        For professional printing, the industry standard is
+        <strong>300 DPI</strong>. Newspapers often run at 150–170 DPI because of
+        how newsprint absorbs ink. Large-format billboard prints can look sharp
+        at 72–100 DPI because you view them from a distance. Fine art giclée
+        printing pushes to 600 DPI or higher.
+      </p>
+
+      <!-- ===================== SECTION 2 ===================== -->
+      <h2 id="dpi-vs-ppi">2. DPI vs PPI: What's the Actual Difference?</h2>
+
+      <p>
+        These two terms are often used interchangeably, which is understandable
+        but technically imprecise.
+        <strong>PPI stands for "pixels per inch"</strong> and refers to the
+        density of pixels in a digital image or on a display. DPI refers to the
+        output density of a printer.
+      </p>
+
+      <p>
+        For a thorough technical breakdown,
+        <a
+          href="https://www.quora.com/What-is-DPI-and-how-do-you-change-it"
+          target="_blank"
+          rel="noopener"
+          >this Quora thread</a
+        >
+        has a clear walkthrough of how the two differ in practice. The short
+        version: when you're working with digital files and talking about
+        printing, use PPI. When you're talking about what your printer actually
+        does with that file, DPI applies. Most design software conflates them,
+        and for everyday purposes, treating them as equivalent is fine.
+      </p>
+
+      <p>
+        The confusion matters most when you're using a
+        <strong>PDF PPI changer</strong> or trying to set embedded image
+        resolution. A PDF can contain images at varying PPI values — a scanned
+        signature might be 200 PPI while an embedded photograph is 600 PPI, all
+        in the same document.
+      </p>
+
+      <div class="pullquote">
+        <p>
+          "A PDF isn't one resolution — it's a container. Every embedded image
+          inside it can have a completely different DPI value."
+        </p>
+      </div>
+
+      <!-- ===================== SECTION 3 ===================== -->
+      <h2 id="check-image-dpi">3. How to Check the DPI of an Image</h2>
+
+      <p>
+        Before you change anything, you need to know what you're working with.
+        There are several ways to find out the DPI of an image, depending on
+        what tools you have available.
+      </p>
+
+      <h3>Method 1: Use an Online DPI Checker (Easiest)</h3>
+
+      <p>
+        The fastest way is to use a dedicated online tool. The
+        <a
+          href="https://www.snappy-fix.com/tools/image-dpi-checker"
+          target="_blank"
+          rel="noopener"
+          >Snappy Fix Image DPI Checker</a
+        >
+        reads your file's metadata and pixel dimensions and instantly tells you
+        the DPI, PPI, pixel count, and intended print size at common
+        resolutions. No upload limits for basic checks, no account required.
+      </p>
+
+      <ol class="steps">
+        <li>
+          Go to the
+          <a
+            href="https://www.snappy-fix.com/tools/image-dpi-checker"
+            target="_blank"
+            rel="noopener"
+            >Snappy Fix Image DPI Checker</a
+          >.
+        </li>
+        <li>Upload your JPG, PNG, TIFF, or WebP file.</li>
+        <li>
+          The tool instantly reads the embedded metadata and shows you: DPI/PPI
+          value, pixel dimensions, and calculated print size.
+        </li>
+        <li>
+          If the DPI is lower than 300 and you need it for print, note the pixel
+          dimensions — you'll need those for the next step.
+        </li>
+      </ol>
+
+      <h3>Method 2: Check EXIF Data on Windows or Mac</h3>
+
+      <p>
+        On Windows, right-click the image → Properties → Details tab. Look for
+        "Horizontal resolution" and "Vertical resolution" — those are your DPI
+        values. On Mac, open the image in Preview, go to Tools → Show Inspector,
+        and check the DPI field under the "Info" panel.
+      </p>
+
+      <h3>Method 3: Read EXIF Metadata Online</h3>
+
+      <p>
+        Many files carry rich EXIF metadata — original camera settings, GPS
+        location, color profile, and yes, DPI. Online EXIF viewers let you see
+        all of this without any software installation. Bear in mind that
+        metadata can be stripped or edited, so a file that says 300 DPI might
+        have been downsampled at some point. Always cross-check with pixel
+        dimensions: a 900×600 pixel image cannot be genuinely 300 DPI at any
+        print size larger than 3×2 inches.
+      </p>
+
+      <div class="tool-card">
+        <h4>Try It: Snappy Fix Image DPI Checker</h4>
+        <p>
+          Instantly analyze any JPG, PNG, or TIFF for resolution, DPI, PPI,
+          pixel count, and print size estimates. No account needed.
+        </p>
+        <a
+          href="https://www.snappy-fix.com/tools/image-dpi-checker"
+          target="_blank"
+          rel="noopener"
+          class="tool-link"
+          >Check Image DPI Free →</a
+        >
+      </div>
+
+      <!-- ===================== SECTION 4 ===================== -->
+      <h2 id="change-image-dpi">4. How to Increase or Change Image DPI</h2>
+
+      <p>
+        This is where things get interesting — and where a lot of well-meaning
+        tutorials give bad advice. Let's be direct:
+        <strong>you cannot manufacture detail that doesn't exist.</strong> If an
+        image was captured at low resolution, changing the DPI number won't add
+        pixels. What it does is tell the printer to scale the image differently.
+      </p>
+
+      <p>That said, there are two legitimate scenarios:</p>
+
+      <p>
+        <strong>Scenario A: Resetting DPI metadata without resampling.</strong>
+        Your 6000×4000 photo is tagged "72 DPI" because it came off a website.
+        The pixel data is excellent. You just need to retag it as 300 DPI so
+        your page layout software doesn't automatically enlarge it. This is
+        instant and lossless.
+      </p>
+
+      <p>
+        <strong>Scenario B: Genuinely upscaling a low-resolution image.</strong>
+        You have a 600×400 pixel image and need to print it at 5×3 inches at 300
+        DPI (which would require 1500×900 pixels). You need to add pixels
+        through upscaling — ideally using an AI-powered tool that can
+        intelligently interpolate detail. For a thorough technical look at how
+        this works, the
+        <a
+          href="https://letsenhance.io/blog/all/how-to-increase-dpi/"
+          target="_blank"
+          rel="noopener"
+          >Let's Enhance guide on increasing DPI</a
+        >
+        covers the upscaling process clearly.
+      </p>
+
+      <h3>Using the Snappy Fix Image DPI Changer</h3>
+
+      <p>
+        The
+        <a
+          href="https://www.snappy-fix.com/tools/image-dpi-changer"
+          target="_blank"
+          rel="noopener"
+          >Snappy Fix Image DPI Changer</a
+        >
+        handles both scenarios. Here's how to use it:
+      </p>
+
+      <ol class="steps">
+        <li>
+          Navigate to the
+          <a
+            href="https://www.snappy-fix.com/tools/image-dpi-changer"
+            target="_blank"
+            rel="noopener"
+            >Image DPI Changer tool</a
+          >.
+        </li>
+        <li>Upload your image (JPG, PNG, or TIFF).</li>
+        <li>
+          Enter your target DPI — typically 300 DPI for professional printing,
+          600 DPI for fine art or high-resolution scanning.
+        </li>
+        <li>
+          Choose whether to resample (add pixels) or simply change the metadata
+          tag.
+        </li>
+        <li>Download your converted file.</li>
+      </ol>
+
+      <div class="highlight-box">
+        <strong>Common target values:</strong> 72 DPI for web and screen; 150
+        DPI for newspaper and low-cost print; 300 DPI for standard professional
+        printing; 600 DPI for fine art, large-format, and high-quality scanning.
+      </div>
+
+      <p>
+        To make an image 300 DPI without Photoshop, a tool like this is your
+        best option. It's free, works in the browser, and doesn't require any
+        installation. The same goes if you need to convert JPG to 600 DPI for
+        archival scanning or high-quality reproduction.
+      </p>
+
+      <!-- ===================== SECTION 5 ===================== -->
+      <h2 id="check-pdf-dpi">5. How to Check PDF DPI and Resolution</h2>
+
+      <p>
+        PDFs are more complex than images because they're containers. A single
+        PDF page might include vector graphics (which are resolution-independent
+        and always crisp), raster images (photos, scanned content), and text
+        rendered via embedded fonts. Only the raster elements have a DPI value —
+        and each one can differ.
+      </p>
+
+      <p>
+        This is why "what DPI is my PDF?" doesn't have a single answer. It's
+        better to ask: "what is the DPI of the lowest-resolution raster image
+        embedded in my PDF?"
+      </p>
+
+      <h3>Using the Snappy Fix PDF DPI Checker</h3>
+
+      <p>
+        The
+        <a
+          href="https://www.snappy-fix.com/tools/pdf-dpi-checker"
+          target="_blank"
+          rel="noopener"
+          >Snappy Fix PDF DPI Checker</a
+        >
+        solves this precisely. Rather than guessing or giving a single
+        misleading average, it analyzes embedded images page by page and
+        surfaces the lowest-resolution elements — the ones most likely to cause
+        print problems.
+      </p>
+
+      <ol class="steps">
+        <li>
+          Open the
+          <a
+            href="https://www.snappy-fix.com/tools/pdf-dpi-checker"
+            target="_blank"
+            rel="noopener"
+            >PDF DPI Checker</a
+          >.
+        </li>
+        <li>Upload your PDF document.</li>
+        <li>
+          The tool scans each page and reports: DPI per embedded image, page
+          dimensions, overall print readiness, and any images that fall below
+          300 DPI.
+        </li>
+        <li>
+          You'll see a clear pass/fail indicator for professional printing.
+        </li>
+      </ol>
+
+      <p>
+        This is particularly useful for checking scanned PDF resolution — a
+        scanned document is 100% raster content, and if the scanner was set to
+        150 DPI, every page will show up below the 300 DPI threshold needed for
+        clean reproduction.
+      </p>
+
+      <div class="tool-card">
+        <h4>Try It: Snappy Fix PDF DPI Checker</h4>
+        <p>
+          Get a full page-by-page DPI analysis of any PDF. See exactly which
+          images are low-resolution before you send to print.
+        </p>
+        <a
+          href="https://www.snappy-fix.com/tools/pdf-dpi-checker"
+          target="_blank"
+          rel="noopener"
+          class="tool-link"
+          >Analyze My PDF →</a
+        >
+      </div>
+
+      <!-- ===================== SECTION 6 ===================== -->
+      <h2 id="change-pdf-dpi">6. How to Change PDF DPI and Resolution</h2>
+
+      <p>
+        There are several reasons you might need to change a PDF's resolution.
+        You might need to <strong>increase PDF resolution</strong> to meet a
+        print vendor's prepress specification. Or you might want to
+        <strong>reduce PDF DPI</strong> to shrink a bloated file down to a
+        manageable email attachment. A PDF image resolution changer handles both
+        directions.
+      </p>
+
+      <h3>How to Increase PDF Resolution for Print</h3>
+
+      <p>
+        When a print shop asks for "a 300 DPI PDF," they usually mean: make sure
+        the embedded raster images are at least 300 PPI at the size they appear
+        on the page. If you've built a brochure in InDesign or Illustrator,
+        exporting at press quality should handle this automatically. But if you
+        received a low-res PDF from a client, you'll need to process it.
+      </p>
+
+      <p>
+        The
+        <a
+          href="https://www.snappy-fix.com/tools/pdf-dpi-changer"
+          target="_blank"
+          rel="noopener"
+          >Snappy Fix PDF DPI Changer</a
+        >
+        lets you convert PDF to 300 DPI (or any target resolution) without
+        needing Acrobat Pro or any desktop software.
+      </p>
+
+      <ol class="steps">
+        <li>
+          Go to the
+          <a
+            href="https://www.snappy-fix.com/tools/pdf-dpi-changer"
+            target="_blank"
+            rel="noopener"
+            >PDF DPI Changer</a
+          >.
+        </li>
+        <li>Upload your PDF. The tool accepts multi-page documents.</li>
+        <li>
+          Set your target DPI — 300 DPI for standard print, 600 DPI for
+          high-quality output.
+        </li>
+        <li>
+          Process and download. The tool re-renders embedded images at the new
+          resolution.
+        </li>
+      </ol>
+
+      <h3>How to Reduce PDF DPI to Make a File Smaller</h3>
+
+      <p>
+        High-resolution PDFs can be huge. A 40-page document with 600 DPI images
+        embedded throughout can easily hit 200MB — unusable for email, slow to
+        upload, and overkill for a presentation viewed on a screen. Reducing the
+        DPI to 150 or 72 for screen viewing dramatically shrinks the file while
+        keeping text and vector graphics perfectly crisp.
+      </p>
+
+      <p>
+        Use the same
+        <a
+          href="https://www.snappy-fix.com/tools/pdf-dpi-changer"
+          target="_blank"
+          rel="noopener"
+          >PDF DPI Changer</a
+        >
+        but set a lower target value. For email-friendly PDFs, 150 DPI is a good
+        balance — readable but not massive. For web viewing only, 96 DPI is
+        fine.
+      </p>
+
+      <p>
+        This is also useful when you need to compress PDF resolution for a
+        submission portal with strict file size limits, or when preparing a
+        portfolio PDF that needs to load quickly on mobile.
+      </p>
+
+      <h3>Changing Scanned PDF Resolution</h3>
+
+      <p>
+        Scanned PDFs are a special case because the entire page content is one
+        large raster image. There's no vector text, no embedded fonts — just a
+        photograph of a document. If the scan was made at 200 DPI, the PDF
+        reflects that and no amount of metadata-only changes will improve it.
+      </p>
+
+      <p>
+        To genuinely change scanned PDF resolution, the tool needs to resample
+        the underlying image data — scaling it up (with quality loss unless AI
+        upscaling is applied) or down. The Snappy Fix PDF DPI Changer handles
+        this by reprocessing the raster content rather than simply relabeling
+        the metadata.
+      </p>
+
+      <div class="tool-card">
+        <h4>Try It: Snappy Fix PDF DPI Changer</h4>
+        <p>
+          Convert PDF to 300 DPI, reduce DPI to compress file size, or set a
+          custom resolution for any embedded image — all online, no software
+          needed.
+        </p>
+        <a
+          href="https://www.snappy-fix.com/tools/pdf-dpi-changer"
+          target="_blank"
+          rel="noopener"
+          class="tool-link"
+          >Change PDF DPI Free →</a
+        >
+      </div>
+
+      <hr class="rule" />
+
+      <!-- ===================== SECTION 7 ===================== -->
+      <h2 id="printing-table">
+        7. Quick Reference: DPI Values for Every Use Case
+      </h2>
+
+      <p>
+        Here's a practical reference table. Save it, bookmark it, share it with
+        clients who keep sending you 72 DPI files for billboard jobs.
+      </p>
+
+      <table class="data-table" aria-label="DPI reference values by use case">
+        <thead>
+          <tr>
+            <th>Use Case</th>
+            <th>Recommended DPI</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Web & social media</td>
+            <td>72–96 DPI</td>
+            <td>
+              Screen display only; DPI metadata mostly irrelevant — pixel
+              dimensions matter
+            </td>
+          </tr>
+          <tr>
+            <td>Standard office printing</td>
+            <td>150–200 DPI</td>
+            <td>Acceptable for internal documents and basic laser printing</td>
+          </tr>
+          <tr>
+            <td>Professional print (brochures, flyers)</td>
+            <td>300 DPI</td>
+            <td>Industry standard; minimum for commercial offset printing</td>
+          </tr>
+          <tr>
+            <td>Magazine & editorial</td>
+            <td>300 DPI</td>
+            <td>Some publications specify 350 DPI for covers</td>
+          </tr>
+          <tr>
+            <td>Fine art & giclée printing</td>
+            <td>300–600 DPI</td>
+            <td>Higher DPI captures finer texture detail; printer-dependent</td>
+          </tr>
+          <tr>
+            <td>Archival scanning</td>
+            <td>400–600 DPI</td>
+            <td>Preserve maximum detail for documents and photographs</td>
+          </tr>
+          <tr>
+            <td>Large-format (banners, posters)</td>
+            <td>72–150 DPI</td>
+            <td>
+              Viewed from distance; pixel density less critical than total size
+            </td>
+          </tr>
+          <tr>
+            <td>Legal & medical documents</td>
+            <td>200–300 DPI</td>
+            <td>
+              Many jurisdictions specify minimum scan resolution for legal
+              records
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        If you're ever unsure whether your file meets a specification, run it
+        through the
+        <a
+          href="https://www.snappy-fix.com/tools/pdf-dpi-checker"
+          target="_blank"
+          rel="noopener"
+          >PDF DPI Checker</a
+        >
+        or
+        <a
+          href="https://www.snappy-fix.com/tools/image-dpi-checker"
+          target="_blank"
+          rel="noopener"
+          >Image DPI Checker</a
+        >
+        first. Ten seconds of checking can save hours of reprinting.
+      </p>
+
+      <p>
+        For a broader look at all the free tools available, the
+        <a
+          href="https://www.snappy-fix.com/tools"
+          target="_blank"
+          rel="noopener"
+          >Snappy Fix tools page</a
+        >
+        lists every utility in one place, from DPI checking to file conversion
+        and beyond.
+      </p>
+
+      <hr class="rule" />
+
+      <!-- ===================== FAQ ===================== -->
+      <h2 id="faq">8. Frequently Asked Questions</h2>
+
+      <div class="faq-section">
+        <div class="faq-item">
+          <div class="faq-q">How do I change the DPI of a PDF?</div>
+          <div class="faq-a">
+            Use an online PDF DPI changer such as the
+            <a
+              href="https://www.snappy-fix.com/tools/pdf-dpi-changer"
+              target="_blank"
+              rel="noopener"
+              >Snappy Fix PDF DPI Changer</a
+            >. Upload your PDF, set a target DPI (300 for professional print is
+            the most common), and download the processed file. The tool
+            resamples embedded raster images to the new resolution. Vector text
+            and graphics are unaffected and remain crisp at any resolution.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">Can I convert a PDF to 300 DPI?</div>
+          <div class="faq-a">
+            Yes — with caveats. If the original embedded images in the PDF have
+            enough pixel data, converting to 300 DPI simply resamples them
+            appropriately. If the original images are genuinely low-resolution
+            (e.g., 72 DPI scans captured at a small size), upsampling to 300 DPI
+            will add pixels through interpolation but won't recover detail that
+            was never captured. The output will be sharper-looking than before
+            but not equivalent to an original 300 DPI capture.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">What DPI should a PDF be for printing?</div>
+          <div class="faq-a">
+            For standard commercial printing (flyers, brochures, business cards,
+            posters), <strong>300 DPI</strong> is the baseline. For fine art
+            reproduction or high-end photography printing, 400–600 DPI is
+            preferred. For large-format printing viewed from a distance
+            (banners, billboards), you can often get away with 100–150 DPI
+            depending on viewing distance. Always confirm specifications with
+            your print vendor before submission.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">Does changing PDF DPI improve quality?</div>
+          <div class="faq-a">
+            Increasing the DPI number alone doesn't improve quality — it just
+            tells the printer to scale the content differently. What actually
+            improves quality is <em>resampling</em> — adding new pixels using
+            interpolation or AI upscaling algorithms. The Snappy Fix PDF DPI
+            Changer does both: it updates the metadata and resamples the image
+            data to genuinely increase resolution, not just relabel it.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            How do I reduce PDF DPI to make a file smaller?
+          </div>
+          <div class="faq-a">
+            Set a lower target DPI in a PDF resolution changer. Dropping from
+            300 to 150 DPI cuts image data by 75%, which typically reduces file
+            size dramatically. This is ideal for screen-only PDFs and email
+            attachments. Text and vector elements are not affected by DPI
+            reduction — only embedded raster images change. Use the
+            <a
+              href="https://www.snappy-fix.com/tools/pdf-dpi-changer"
+              target="_blank"
+              rel="noopener"
+              >Snappy Fix PDF DPI Changer</a
+            >
+            to do this in seconds online.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            What is the difference between DPI and PPI in a PDF?
+          </div>
+          <div class="faq-a">
+            DPI (dots per inch) is a printer output measurement — how many ink
+            dots per inch. PPI (pixels per inch) is a digital image measurement
+            — how many pixels per inch. In the context of PDFs, "DPI" is often
+            used loosely to mean the pixel density of embedded images, which is
+            technically PPI. When you use a PDF PPI changer, you're changing the
+            pixel density of the raster images contained within the PDF.
+            <a
+              href="https://en.wikipedia.org/wiki/DPI"
+              target="_blank"
+              rel="noopener"
+              >Wikipedia's DPI article</a
+            >
+            covers the technical distinction in full detail.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">Can scanned PDF resolution be changed online?</div>
+          <div class="faq-a">
+            Yes. Scanned PDFs are essentially images wrapped in a PDF container,
+            which makes them ideal candidates for DPI processing. Upload the
+            scanned PDF to the
+            <a
+              href="https://www.snappy-fix.com/tools/pdf-dpi-changer"
+              target="_blank"
+              rel="noopener"
+              >PDF DPI Changer</a
+            >, choose your target resolution, and the tool will reprocess the
+            underlying image data. Note that increasing resolution of an
+            already-low-quality scan will smooth edges but cannot recover lost
+            detail.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            How do I know if a PDF is high resolution for printing?
+          </div>
+          <div class="faq-a">
+            Run it through a
+            <a
+              href="https://www.snappy-fix.com/tools/pdf-dpi-checker"
+              target="_blank"
+              rel="noopener"
+              >PDF DPI Checker</a
+            >. The checker will report the resolution of every embedded raster
+            image, flag any below 300 DPI, and tell you exactly which pages and
+            images need attention. Don't rely on how a PDF looks on screen —
+            screen rendering is resolution-independent and will make even
+            low-res images look passable. The printer, however, will not be so
+            forgiving.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            Why does a PDF look sharp on screen but print blurry?
+          </div>
+          <div class="faq-a">
+            Because screen display and print resolution are completely
+            different. PDF viewers render documents at screen resolution (72–96
+            PPI) and use smart anti-aliasing to make everything look smooth. The
+            printer attempts to reproduce the file's actual pixel data at full
+            size. If embedded images are 72 DPI but the document is set to print
+            at 300 DPI quality, the printer will stretch those pixels and the
+            result is blurry output. This is one of the most common prepress
+            problems in the industry.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">
+            Is there an online tool to check image DPI without Photoshop?
+          </div>
+          <div class="faq-a">
+            Yes — the
+            <a
+              href="https://www.snappy-fix.com/tools/image-dpi-checker"
+              target="_blank"
+              rel="noopener"
+              >Snappy Fix Image DPI Checker</a
+            >
+            lets you check the DPI, pixel dimensions, and print size of any JPG,
+            PNG, TIFF, or WebP file directly in your browser. No software to
+            install, no account required, and it reads the full EXIF metadata so
+            you get accurate DPI, PPI, and color profile information instantly.
+          </div>
+        </div>
+      </div>
+
+      <hr class="rule" />
+
+      <p>
+        If you've made it this far, you now know more about DPI and resolution
+        than the majority of people who deal with these files every day. The
+        biggest takeaways: DPI is a print concept, not a screen one; PDFs
+        contain multiple images that can each have different resolutions;
+        checking before submitting is always worth the thirty seconds it takes;
+        and changing DPI is simple when you have the right tool.
+      </p>
+
+      <p>
+        Everything covered in this guide — checking image DPI, changing image
+        DPI, analyzing PDF resolution, and converting PDF DPI — is available for
+        free at
+        <a href="https://www.snappy-fix.com/" target="_blank" rel="noopener"
+          >Snappy Fix</a
+        >. No account, no watermarks, no nonsense. Just fast, accurate tools
+        built for people who work with files for real.
+      </p>
+    </main>
+
+    <div class="footer-cta">
+      <h3>Free DPI Tools — No Account Needed</h3>
+      <p>
+        Check, change, and convert resolution for images and PDFs in seconds.
+        Built for designers, printers, and publishers.
+      </p>
+      <div class="btn-group">
+        <a
+          href="https://www.snappy-fix.com/tools/image-dpi-checker"
+          target="_blank"
+          rel="noopener"
+          >Image DPI Checker</a
+        >
+        <a
+          href="https://www.snappy-fix.com/tools/image-dpi-changer"
+          target="_blank"
+          rel="noopener"
+          >Image DPI Changer</a
+        >
+        <a
+          href="https://www.snappy-fix.com/tools/pdf-dpi-checker"
+          target="_blank"
+          rel="noopener"
+          >PDF DPI Checker</a
+        >
+        <a
+          href="https://www.snappy-fix.com/tools/pdf-dpi-changer"
+          target="_blank"
+          rel="noopener"
+          >PDF DPI Changer</a
+        >
+        <a
+          href="https://www.snappy-fix.com/tools"
+          target="_blank"
+          rel="noopener"
+          class="secondary"
+          >All Tools →</a
+        >
+      </div>
+    </div>
+
+    <script>
+      // Reading progress line
+      const line = document.getElementById("readingLine");
+      window.addEventListener(
+        "scroll",
+        () => {
+          const scrollTop = window.scrollY;
+          const docHeight =
+            document.documentElement.scrollHeight - window.innerHeight;
+          const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+          line.style.width = pct + "%";
+        },
+        { passive: true },
+      );
+    </script>
+  </body>
+</html>
